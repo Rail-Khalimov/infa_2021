@@ -5,19 +5,17 @@ pygame.init()
 
 FPS = 30
 screen = pygame.display.set_mode((400,400))
+screen.fill('white')
 
-x1 = 100; y1 = 100
-x2 = 300; y2 = 200
-N = 10
-color = (255, 255, 255)
-rect(screen, color, (x1, y1, x2-x1, y2-y1), 2)
-h = (x2 - x1) // (N + 1)
-x = x1 + h
-for i in range(N):
-	line(screen, color, (x, y1), (x, y2))
-	x += h
-
-
+circle(screen, (0, 0, 0), (200, 200), 102)
+circle(screen, (255, 255, 0), (200, 200), 100)
+circle(screen, (255, 0, 0), (150, 150), 20)
+circle(screen, (255, 0, 0), (250, 150), 20)
+circle(screen, (0, 0, 0), (150, 150), 10)
+circle(screen, (0, 0, 0), (250, 150), 10)
+rect(screen, (0, 0, 0), (150, 250, 100, 20))
+polygon(screen, (0, 0, 0), [(210,140), (215, 145), (285, 105), (280, 100)])
+polygon(screen, (0, 0, 0), [(110,105), (115, 100), (185, 140), (180, 145)])
 
 
 
